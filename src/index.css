@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-dot;
+    overflow: hidden;
+    /* スマホでのタッチ操作を最適化 */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* スマホでのフォントサイズ調整を防ぐ */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+@layer components {
+  .scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 0, 122, 0.5),
+      transparent
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanline 8s linear infinite;
+  }
+
+  .neon-glow {
+    text-shadow: 
+      0 0 5px #FF007A,
+      0 0 10px #FF007A,
+      0 0 15px #FF007A,
+      0 0 20px #FF007A;
+  }
+
+  .neon-glow-red {
+    text-shadow: 
+      0 0 5px #FF0000,
+      0 0 10px #FF0000,
+      0 0 15px #FF0000,
+      0 0 20px #FF0000;
+  }
+}
+
