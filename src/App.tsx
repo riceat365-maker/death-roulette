@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, AlertTriangle, LogOut } from 'lucide-react';
+import { X, AlertTriangle } from 'lucide-react';
 import YoungHeeDoll from './YoungHeeDoll';
 
 interface Player {
